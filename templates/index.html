@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat Here</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-container">
+        <img
+          src="{{url_for('static', filename='images/logo.png')}}"
+          alt="Logo"
+          class="logo"
+        />
+        <h1>Ask your query</h1>
+      </header>
+      <main class="chat-main" id="chat-main"></main>
+      <div class="chat-input">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type your message here..."
+          autocomplete="off"
+        />
+        <button id="send-button">Send</button>
+      </div>
+      <div id="loader" class="loader" style="display: none"></div>
+    </div>
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+  </body>
+</html>
