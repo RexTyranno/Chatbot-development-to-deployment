@@ -1,6 +1,11 @@
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffe2f9;
+  font-family: Cambria, Cochin, Georgia, serif;
+  background-color: #ffffff;
+  color: #fff;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,31 +15,30 @@ body {
 }
 
 .chat-container {
-  width: 400px;
-  height: 600px;
+  width: 20rem;
+  height: 35rem;
   max-width: 90%;
-  background-color: #ffe3f6;
-  border: 1px solid #f5d6ff;
-  border-radius: 8px;
+  background-color: #1d1b1b;
+  border: 0.0625rem solid #000000;
+  border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .chat-header {
-  font-style: italic;
-  background-color: #6c17b7;
-  color: rgb(0, 0, 0);
-  padding: 15px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  background: linear-gradient(100deg, #00041d, #000000);
+  color: #fff;
+  padding: 0.75rem;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
   display: flex;
   align-items: center;
 }
 
 .chat-header .logo {
-  height: 30px;
-  margin-right: 10px;
+  height: 2rem;
+  margin-right: 0.625rem;
   border-radius: 100%;
 }
 
@@ -45,44 +49,51 @@ body {
 
 .chat-main {
   flex: 1;
-  padding: 15px;
+  padding: 0.938rem;
   overflow-y: auto;
-  background-color: #f9f9f9;
+  background: radial-gradient(
+    circle at center,
+    rgb(234, 217, 255) 0,
+    rgb(255, 255, 254)
+  );
 }
 
 .chat-input {
   display: flex;
-  border-top: 1px solid #ddd;
-  padding: 10px;
-  background-color: #fafafa;
+  border-top: 0.0625rem solid #333;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  background-color: #1d1b1b;
 }
 
 .chat-input input {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 0.625rem;
+  border: 0.0625rem solid #555;
+  border-radius: 0.625rem;
+  font-size: 0.9rem;
+  background-color: rgb(255, 255, 254);
+  color: #000000;
 }
 
 .chat-input button {
-  padding: 10px 15px;
-  margin-left: 10px;
-  background-color: #710da3;
-  color: white;
+  padding: 0.5rem 0.9375rem;
+  margin-left: 0.625rem;
+  background-color: rgb(255, 255, 254);
+  color: #000000;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.625rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0.9rem;
   transition: background-color 0.3s ease;
 }
 
 .chat-input button:hover {
-  background-color: #c9139c;
+  background-color: rgb(234, 217, 255);
 }
 
 .message {
-  margin-bottom: 15px;
+  margin-bottom: 0.938rem;
   display: flex;
 }
 
@@ -96,35 +107,36 @@ body {
 
 .message p {
   max-width: 70%;
-  padding: 10px 15px;
-  border-radius: 20px;
+  padding: 0.625rem 0.938rem;
+  border-radius: 1.25rem;
   line-height: 1.4;
   word-wrap: break-word;
 }
 
 .message.user p {
-  background-color: #f39ef3;
-  color: #333;
+  font-style: normal;
+  background-color: rgb(1, 8, 24);
+  color: #fff;
   border-bottom-right-radius: 0;
 }
 
 .message.assistant p {
-  background-color: #ececec;
-  color: #333;
+  background-color: rgb(255, 255, 254);
+  border-color: #1d1b1b;
+  color: #000000;
   border-bottom-left-radius: 0;
 }
 
-/* Loader Styles */
 .loader {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #a21cb3;
+  border: 0.25rem solid #f3f3f3;
+  border-top: 0.25rem solid #5e518a;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   animation: spin 1s linear infinite;
 }
 
@@ -137,8 +149,7 @@ body {
   }
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 35rem) {
   .chat-container {
     width: 100%;
     height: 100vh;
@@ -146,21 +157,21 @@ body {
   }
 
   .chat-main {
-    padding: 10px;
+    padding: 0.625rem;
   }
 
   .chat-input {
-    padding: 8px;
+    padding: 0.5rem;
   }
 
   .chat-input input {
-    padding: 8px;
-    font-size: 14px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
   }
 
   .chat-input button {
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
   }
 
   .chat-header h1 {

@@ -6,6 +6,7 @@ client= OpenAI(api_key=api_key)
 
 def ask_openai(question,chat_history=[]):
     try:
+        chat_history=[{"role":"system","content":"Talk Like you are a cat"}]
         chat_history.append({"role":"user","content":question})
         
         response=client.chat.completions.create(
